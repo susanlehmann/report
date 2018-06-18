@@ -1,0 +1,53 @@
+<div class="container">
+ <form>
+	<div class="row">
+		<h2 style="text-align:center">Login with Social Media or Manually</h2>
+		<div class="v1">
+			<span class="v1-innertext">or</span>
+		</div>
+		
+		<div class="col">
+			<a href="#" class="fb btn">
+				<i class="fa fa-facebook fa-fw"></i> Login with Facebook
+			</a>
+			<a href="#" class="twitter btn">
+				<i class="fa fa-twitter fa-fw"></i> Login with Twitter
+			</a>
+			<a href="#" class="google btn"><i class="fa fa-google fa-fw">
+				</i> Login with Google+
+			</a>
+		</div>
+		<div class="col">
+			<div class="hide-md-lg">
+				<p>Or sign in manually:</p>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<%= form_for(:session, url: login_path) do |f| %>
+	
+						<%= f.label :email %>
+						<%= f.email_field :email, class: 'form-control' %>
+	
+						<%= f.label :password %>
+						<%= f.password_field :password, class: 'form-control' %>
+	
+						<%= f.submit "Log in", class: "btn btn-primary" %>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+ </form>
+</div>
+
+<div class="bottom-container">
+  <div class="row">
+    <div class="col">
+      <a style="color:white" class="btn"><%= link_to "Sign up",signup_path %></a>
+    </div>
+    <div class="col">
+      <a href="#" style="color:white" class="btn">Forgot password?</a>
+    </div>
+  </div>
+</div> 
